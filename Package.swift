@@ -8,8 +8,7 @@ let package = Package(
     platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "PandaKit",targets: ["PandaKit"]),
-        .library(name: "PNDAView", type: .static, targets: ["PandaKit"])
+        .library(name: "PandaKit",targets: ["PandaKit"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
