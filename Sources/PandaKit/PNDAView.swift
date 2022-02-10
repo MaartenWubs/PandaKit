@@ -18,7 +18,7 @@ public class PNDAView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {
+    public func setupView() {
     }
 }
 
