@@ -26,7 +26,7 @@ extension UIView {
 }
 
 extension UIColor {
-    static func withRGBValue(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+    static public func withRGBValue(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
             return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
         }
 }

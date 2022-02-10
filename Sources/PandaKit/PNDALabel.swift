@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class PNDAView: UIView {
+class PNDALabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -22,6 +22,6 @@ public class PNDAView: UIView {
     }
 }
 
-extension PNDAView {
+extension PNDALabel {
     
 }

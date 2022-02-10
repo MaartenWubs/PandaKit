@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class PNDAView: UIView {
+public class PNDAButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -20,8 +20,9 @@ public class PNDAView: UIView {
     
     public func setupView() {
     }
+    
 }
 
-extension PNDAView {
+extension PNDAButton {
     
 }
