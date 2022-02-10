@@ -19,7 +19,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PandaKit",
-            dependencies: []),
+            path: "Sources/PandaKit"),
         .testTarget(
             name: "PandaKitTests",
             dependencies: ["PandaKit"]),
