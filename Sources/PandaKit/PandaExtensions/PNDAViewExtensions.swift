@@ -23,11 +23,24 @@ extension UIView {
                                                           metrics: nil,
                                                           views: viewsDict))
         }
-}
-
-extension UIColor {
-    static public func withRGBValue(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
-            return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+    
+    public func setAnchorCenterXToSuperview(withConstant constant: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        if let anchor = superview?.centerXAnchor {
+            centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
         }
+    }
+    
+    public func setAnchorCenterYToSuperview(withConstant constant: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        if let anchor = superview?.centerYAnchor {
+            centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        }
+    }
+    
+    public func setAnchorCenterToSuperview() {
+        setAnchorCenterXToSuperview()
+        setAnchorCenterYToSuperview()
+    }
 }
 

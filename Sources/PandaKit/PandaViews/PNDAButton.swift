@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 open class PNDAButton: UIButton {
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    public init() {
+        super.init(frame: .zero)
         setupView()
     }
     
