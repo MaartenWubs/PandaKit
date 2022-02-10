@@ -8,20 +8,21 @@
 import Foundation
 import UIKit
 
-class PNDALabel: UILabel {
-    override init(frame: CGRect) {
+open class PNDAButton: UIButton {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupView() {
+    open func setupView() {
     }
+    
 }
 
-extension PNDALabel {
+extension PNDAButton {
     
 }

@@ -8,21 +8,16 @@
 import Foundation
 import UIKit
 
-public class PNDAButton: UIButton {
-    override init(frame: CGRect) {
+open class PNDADatasourceCell: UICollectionViewCell {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupView() {
+    open func setupView() {
     }
-    
-}
-
-extension PNDAButton {
-    
 }
