@@ -5,11 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "PandaKit",
+    platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "PandaKit",
-            targets: ["PandaKit"]),
+        .library(name: "PandaKit",targets: ["PandaKit"]),
+        .library(name: "PNDAView", type: .static, targets: ["PandaKit"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,8 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PandaKit",
-            dependencies: ["PNDAView"],
-            path: "Sources/PandaKit"),
+            dependencies: []),
         .testTarget(
             name: "PandaKitTests",
             dependencies: ["PandaKit"]),
