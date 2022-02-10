@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PNDAView: UIView {
+public class PNDAView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
