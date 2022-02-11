@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// An object that displays a single image or a sequence of animated images in the interface.
 open class PNDAImageView: UIImageView {
     open var shouldUseEmptyImage = true
     
@@ -41,8 +42,6 @@ extension PNDAImageView {
         isUserInteractionEnabled = true
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
-    
-    
     
     @objc
     func handleTap() {

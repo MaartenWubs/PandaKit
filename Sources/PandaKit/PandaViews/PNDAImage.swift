@@ -12,6 +12,7 @@ import UIKit
 
 public typealias _ImageLiteralType = UIImage
 
+/// An object that manages image data in your app.
 open class PNDAImage: UIImage {
     convenience override init() {
         self.init()

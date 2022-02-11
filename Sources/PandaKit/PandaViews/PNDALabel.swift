@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// A view that displays one or more lines of informational text.
 open class PNDALabel: UILabel {
     
     public init(text: String? = nil, font: UIFont? = nil) {

@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// A single data item when that item is within the collection view's visible bounds.
 open class PNDADatasourceCell: UICollectionViewCell {
     
     open var datasourceItem: Any?

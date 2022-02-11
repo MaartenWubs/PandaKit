@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// An object that manages the content for a rectangular area on the screen.
 open class PNDAView: UIView {
     
     public override init(frame: CGRect) {
@@ -21,6 +22,7 @@ open class PNDAView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Override this methods to configure the view.
     open func setupView() {
     }
 }
