@@ -1,4 +1,4 @@
-![PandaKit](https://user-images.githubusercontent.com/64893914/153586682-374db9cd-1110-457e-92d1-ffdb7dcabc9d.png) 
+![PandaKitLogo](https://user-images.githubusercontent.com/64893914/153651028-6d27069e-8c86-4dc6-b528-3dc122f1adac.png)
 
 # PandaKit
 
