@@ -1,8 +1,5 @@
 ![PandaKitLogo](https://user-images.githubusercontent.com/64893914/153651028-6d27069e-8c86-4dc6-b528-3dc122f1adac.png)
 
-# PandaKit
-
-
 ## Welcome to PandaKit
 
 PandaKit is a swift package that I created because I discovered that I often go back to writing the same code in different
