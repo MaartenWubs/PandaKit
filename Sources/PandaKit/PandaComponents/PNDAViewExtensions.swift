@@ -1,15 +1,26 @@
+
+//===----------------------------------------------------------------------===//
 //
-//  File.swift
-//  
+// This source file is part of the PandaKit project
 //
-//  Created by Maarten Wubs on 2/10/22.
+// Copyright (c) 2022 Maarten Wubs
 //
+//===----------------------------------------------------------------------===//
 
 import Foundation
 import UIKit
 
 extension UIView {
     
+    /// This methods can be used to set constraints with a visual layout. This is a shorter method based upon
+    /// NSLayoutConstraint.
+    ///
+    /// - **Usage**:
+    ///     - view.addConstraintsWithFormat("H:|-16-[v0(44)]-16-|", views: someView)
+    ///
+    /// - Parameters:
+    ///   - format: string representing the view layout
+    ///   - views: subviews to be set in the view layout
     public func addConstraintsWithFormat(_ format: String, views: UIView...) {
             var viewsDict = [String: UIView]()
             for (index, view) in views.enumerated() {
@@ -24,6 +35,8 @@ extension UIView {
                                                           views: viewsDict))
         }
     
+    /// This method sets the applied view to the x center of the superview
+    /// - Parameter constant: the amount to off center the view will be
     public func setAnchorCenterXToSuperview(withConstant constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         if let anchor = superview?.centerXAnchor {
@@ -31,6 +44,8 @@ extension UIView {
         }
     }
     
+    /// This method sets the applied view to the x center of the superview
+    /// - Parameter constant: the amount to off center the view will be
     public func setAnchorCenterYToSuperview(withConstant constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         if let anchor = superview?.centerYAnchor {
@@ -38,11 +53,24 @@ extension UIView {
         }
     }
     
+    /// This method sets the applied view to the center of the superview
     public func setAnchorCenterToSuperview() {
         setAnchorCenterXToSuperview()
         setAnchorCenterYToSuperview()
     }
     
+    /// This method sets the anchors to all specified sides
+    /// - Parameters:
+    ///   - top: Top anchor
+    ///   - bottom: Bottom anchor
+    ///   - left: Left anchor
+    ///   - right: Right anchor
+    ///   - topConstant: Top constant
+    ///   - bottomConstant: Bottom Constant
+    ///   - leftConstant: Left constant
+    ///   - rightConstant: Right constant
+    ///   - widthConstant: Width constant
+    ///   - heightConstant: Height constant
     public func anchor(top: NSLayoutYAxisAnchor? = nil,
                        bottom: NSLayoutYAxisAnchor? = nil,
                        left: NSLayoutXAxisAnchor? = nil,
@@ -66,7 +94,7 @@ extension UIView {
                                     heightConstant: heightConstant)
     }
     
-    public func anchorWithReturnAnchors(top: NSLayoutYAxisAnchor? = nil,
+    private func anchorWithReturnAnchors(top: NSLayoutYAxisAnchor? = nil,
                                         left: NSLayoutXAxisAnchor? = nil,
                                         bottom: NSLayoutYAxisAnchor? = nil,
                                         right: NSLayoutXAxisAnchor? = nil,

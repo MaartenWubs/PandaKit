@@ -1,9 +1,8 @@
-import UIKit
 
-public class PandaKit {
-
-    public init() {
-    }
-    
-}
-
+//===----------------------------------------------------------------------===//
+//
+// This source file is part of the PandaKit project
+//
+// Copyright (c) 2022 Maarten Wubs
+//
+//===----------------------------------------------------------------------===//

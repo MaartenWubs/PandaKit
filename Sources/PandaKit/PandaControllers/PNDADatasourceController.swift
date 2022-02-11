@@ -1,13 +1,16 @@
-//
-//  File.swift
-//  
-//
-//  Created by Maarten Wubs on 2/10/22.
-//
 
+//===----------------------------------------------------------------------===//
+//
+// This source file is part of the PandaKit project
+//
+// Copyright (c) 2022 Maarten Wubs
+//
+//===----------------------------------------------------------------------===//
 import Foundation
 import UIKit
 
+/// PNDADatasourceController is simply a UICollectioViewController that allows quick creation of
+/// list views. In order to render out the items in the list, provide it with a PNDADatasource object.
 open class PNDADatasourceController: UICollectionViewController,
                                 UICollectionViewDelegateFlowLayout {
     
@@ -18,6 +21,7 @@ open class PNDADatasourceController: UICollectionViewController,
         return aiv
     }()
     
+    /// The provided PNDADatasource object.
     open var datasource: PNDADatasource? {
         didSet {
             if let cellClasses = datasource?.cellClasses() {
@@ -92,6 +96,12 @@ open class PNDADatasourceController: UICollectionViewController,
         return CGSize(width: view.frame.width, height: 50)
     }
     
+    /// Returns the cell that corresponds to the item at the specified index path in the
+    /// PNDADatasourceController
+    /// - Parameters:
+    ///   - collectionView: The PNDADatasourceController requesting this information
+    ///   - indexPath: The index path that specifies the location of the item
+    /// - Returns: A configured PNDADatasourceCell object.
     open override func collectionView(_ collectionView: UICollectionView,
                                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -117,6 +127,13 @@ open class PNDADatasourceController: UICollectionViewController,
         return cell
     }
     
+    /// Returns a supplementary view for the specified element kind to display in the
+    /// PNDADatasourceController view.
+    /// - Parameters:
+    ///   - collectionView: The PNDADatasourceController requesting this information
+    ///   - kind: The kind of supplementary view to provide. The value of this string is defined by the layout object that supports the supplementary view.
+    ///   - indexPath: The index path that specifies the location of the new supplementary view
+    /// - Returns: A configured supplementary view object.
     open override func collectionView(_ collectionView: UICollectionView,
                                       viewForSupplementaryElementOfKind kind: String,
                                       at indexPath: IndexPath) -> UICollectionReusableView {
@@ -162,6 +179,7 @@ open class PNDADatasourceController: UICollectionViewController,
         let rc = UIRefreshControl()
         rc.addTarget(self,
                      action: #selector(handleRefresh), for: .valueChanged)
+        return rc
     }
     
     @objc
