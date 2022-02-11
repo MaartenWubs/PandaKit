@@ -17,6 +17,7 @@ open class PNDAImageView: UIImageView {
     private var urlStringForChecking: String?
     private var emptyImage: PNDAImage?
     
+    /// A convenient way to load an cache images.
     public static let imageCache = NSCache<NSString, PNDADiscardableImageCacheItem>()
 
     public required init?(coder: NSCoder) {
@@ -47,7 +48,11 @@ extension PNDAImageView {
     func handleTap() {
         tapCallback?()
     }
-
+    
+    /// Easily load an image from a URL string and cache it to reduce network overhead.
+    /// - Parameters:
+    ///   - urlString: The url location of your image
+    ///   - completion: Optionally execute some task after the image download completes
     open func loadImage(urlString: String, completion: (() -> ())? = nil) {
         image = nil
         self.urlStringForChecking = urlString
