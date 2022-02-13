@@ -17,6 +17,17 @@ Once added, you only have to import PandaKit in the file you want to use it.
 
 ```PandaKit``` is fully compatible with ```UIkit``` and other standard Apple frameworks.
 
+### Views
+
+```PNDAView``` is equal to ```UIView```. Using ```PNDAView``` gives you access to all the methods
+available to ```UIView```. You only have to override ```setupView()``` to configure your ```PNDAView```.
+
+``` swift
+override func setupView() {
+    // Your view code goes here...
+}
+```
+
 ### Collections
 
 ```PNDADatasourceController``` is created to replace the usage of ```UICollectionViewController``` and to 
@@ -53,3 +64,31 @@ class YourDatasourceController: PNDADatasourceController {
 }
 ```
 
+## Extensions
+
+```PandaKit``` provides also methods as a extansion on some of the ```UIKit``` classes. 
+
+### UIView
+
+For ```UIView``` there are methods that will make it easier to use AutoLayout on your
+views. ```setAnchorCenterXToSuperview``` will center the applicable view on the X axis.
+```setAnchorCenterYToSuperview``` will center your view on the Y axis. ```setAnchorCenterToSuperview```
+will center the view to the cetner of the superview.
+
+```anchor``` will add constraints to all the specified anchors in the parameters.
+
+``` swift
+
+yourView.anchor(top: TopAnchor, bottom: BottomAnchor, left: LeftAnchor, right: RightAnchor, 
+topConstant: someComstantValue, bottomConstant: someConstantValue, leftConstant: someConstantValue, rightConstant: someConstantValue,
+widthConstant: someValue, heightConstant: someValue)
+
+```
+
+```addConstraintsWithFormat``` will use a string value to set the layout to the views.
+
+``` swift
+
+addConstraintsWithFormat("H:|-16-[v0]-16-|", views: yourView)
+
+```
