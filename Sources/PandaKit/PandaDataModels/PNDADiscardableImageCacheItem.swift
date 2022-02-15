@@ -15,7 +15,7 @@ open class PNDADiscardableImageCacheItem: NSObject, NSDiscardableContent {
     private(set) public var image: UIImage?
     var accessCount: UInt = 0
     
-    public init(image: PNDAImage) {
+    public init(image: UIImage) {
         self.image = image
     }
     
