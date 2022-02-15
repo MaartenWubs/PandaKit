@@ -8,21 +8,23 @@
 import Foundation
 import UIKit
 
-open class PNDATextView: UITextView {
-    
-    public init() {
-        super.init(frame: .zero, textContainer: nil)
-        backgroundColor = .clear
-        isEditable = false
-        isScrollEnabled = false
+extension UITextView {
+    convenience public init(text: String?,
+                            font: UIFont? = UIFont.systemFont(ofSize: 14),
+                            textColor: UIColor = .black,
+                            textAlignment: NSTextAlignment = .left) {
+        
+        self.init()
+        self.text = text
+        self.font = font
+        self.textColor = textColor
+        self.textAlignment = textAlignment
     }
-    
-    public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }
 
-extension PNDATextView {
-    
+extension UITextField {
+    convenience public init(placeholder: String) {
+        self.init()
+        self.placeholder = placeholder
+    }
 }

@@ -28,15 +28,11 @@ class PNDADefaultCell: PNDADatasourceCell {
         super.setupView()
         addSubview(label)
         label.anchor(top: topAnchor,
+                     leading: leadingAnchor,
                      bottom: bottomAnchor,
-                     left: leftAnchor,
-                     right: rightAnchor,
-                     topConstant: 0,
-                     bottomConstant: 0,
-                     leftConstant: 10,
-                     rightConstant: 10,
-                     widthConstant: 0,
-                     heightConstant: 0)
+                     trailing: trailingAnchor,
+                     padding: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
+                     size: CGSize(width: 0, height: 0))
     }
 }
 

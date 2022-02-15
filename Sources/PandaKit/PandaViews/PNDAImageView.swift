@@ -90,3 +90,12 @@ extension PNDAImageView {
         }).resume()
     }
 }
+
+//MARK: -UIImageView Extension
+extension UIImageView {
+    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+        self.init(image: image)
+        self.contentMode = contentMode
+        self.clipsToBounds = true
+    }
+}

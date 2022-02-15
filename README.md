@@ -28,7 +28,7 @@ override func setupView() {
 }
 ```
 
-### Collections
+### Collections Views
 
 ```PNDADatasourceController``` is created to replace the usage of ```UICollectionViewController``` and to 
 make the use and creation of cells easier by providing all the information into ```PNDADatasource```. PandaKit
@@ -79,9 +79,16 @@ will center the view to the cetner of the superview.
 
 ``` swift
 
-yourView.anchor(top: TopAnchor, bottom: BottomAnchor, left: LeftAnchor, right: RightAnchor, 
-topConstant: someComstantValue, bottomConstant: someConstantValue, leftConstant: someConstantValue, rightConstant: someConstantValue,
-widthConstant: someValue, heightConstant: someValue)
+yourView.anchor(top: TopAnchor, 
+                bottom: BottomAnchor, 
+                left: LeftAnchor, 
+                right: RightAnchor, 
+                topConstant: someComstantValue, 
+                bottomConstant: someConstantValue, 
+                leftConstant: someConstantValue, 
+                rightConstant: someConstantValue,
+                widthConstant: someValue, 
+                heightConstant: someValue)
 
 ```
 
@@ -92,3 +99,9 @@ widthConstant: someValue, heightConstant: someValue)
 addConstraintsWithFormat("H:|-16-[v0]-16-|", views: yourView)
 
 ```
+
+### UIColor
+
+```PandaKit``` also provides more functionality to ```UIColor```. With it's own color scheme and a 
+method for easier use of RGB value on ```UIColor``` by dividing the provided value with 255 to conform 
+to the ```UIColor``` value.
