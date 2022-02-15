@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@available(iOS 11.0, tvOS 11.0, *)
+@available(iOS 13.0, tvOS 13.0, *)
 open class PNDACircularImageView: UIImageView {
  
     public init(width: CGFloat, image: UIImage? = nil ) {

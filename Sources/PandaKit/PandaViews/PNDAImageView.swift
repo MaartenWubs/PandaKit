@@ -15,7 +15,7 @@ open class PNDAImageView: UIImageView {
     open var shouldUseEmptyImage = true
     
     private var urlStringForChecking: String?
-    private var emptyImage: PNDAImage?
+    private var emptyImage: UIImage?
     
     /// A convenient way to load an cache images.
     public static let imageCache = NSCache<NSString, PNDADiscardableImageCacheItem>()
@@ -26,7 +26,7 @@ open class PNDAImageView: UIImageView {
     
     private var tapCallback: (() ->())?
     
-    public init(cornerRadius: CGFloat = 0, emptyImage: PNDAImage? = nil) {
+    public init(cornerRadius: CGFloat = 0, emptyImage: UIImage? = nil) {
         super.init(frame: .zero)
         contentMode = .scaleAspectFill
         clipsToBounds = true
@@ -77,7 +77,7 @@ extension PNDAImageView {
             }
             
             DispatchQueue.main.async {
-                if let image = PNDAImage(data: data!) {
+                if let image = UIImage(data: data!) {
                     let cacheItem = PNDADiscardableImageCacheItem(image: image)
                     PNDAImageView.imageCache.setObject(cacheItem, forKey: urlKey)
                     

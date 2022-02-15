@@ -22,7 +22,7 @@ class PNDADefaultCell: PNDADatasourceCell {
         }
     }
     
-    let label = PNDALabel()
+    let label = UILabel()
     
     override func setupView() {
         super.setupView()

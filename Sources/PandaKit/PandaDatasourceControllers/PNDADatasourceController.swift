@@ -11,6 +11,7 @@ import UIKit
 
 /// PNDADatasourceController is simply a UICollectioViewController that allows quick creation of
 /// list views. In order to render out the items in the list, provide it with a PNDADatasource object.
+@available(iOS 13.0, tvOS 13.0, *)
 open class PNDADatasourceController: UICollectionViewController,
                                 UICollectionViewDelegateFlowLayout {
     
