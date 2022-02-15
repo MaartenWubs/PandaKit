@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// A control that executes custom code in response to user interactions.
 open class PNDAButton: UIButton {
     
     public init() {

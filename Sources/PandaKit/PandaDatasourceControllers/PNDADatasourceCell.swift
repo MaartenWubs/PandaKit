@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 
+/// A single data item when that item is within the collection view's visible bounds.
 open class PNDADatasourceCell: UICollectionViewCell {
     
     open var datasourceItem: Any?
@@ -35,14 +36,10 @@ open class PNDADatasourceCell: UICollectionViewCell {
         clipsToBounds = true
         addSubview(separatorLineView)
         separatorLineView.anchor(top: nil,
+                                 leading: leadingAnchor,
                                  bottom: bottomAnchor,
-                                 left: leftAnchor,
-                                 right: rightAnchor,
-                                 topConstant: 0,
-                                 bottomConstant: 0,
-                                 leftConstant: 0,
-                                 rightConstant: 0,
-                                 widthConstant: 0,
-                                 heightConstant: 0.5)
+                                 trailing: trailingAnchor,
+                                 padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+                                 size: CGSize(width: 0, height: 0))
     }
 }

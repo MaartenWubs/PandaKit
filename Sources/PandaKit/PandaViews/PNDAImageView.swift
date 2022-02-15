@@ -10,12 +10,14 @@
 import Foundation
 import UIKit
 
+/// An object that displays a single image or a sequence of animated images in the interface.
 open class PNDAImageView: UIImageView {
     open var shouldUseEmptyImage = true
     
     private var urlStringForChecking: String?
     private var emptyImage: PNDAImage?
     
+    /// A convenient way to load an cache images.
     public static let imageCache = NSCache<NSString, PNDADiscardableImageCacheItem>()
 
     public required init?(coder: NSCoder) {
@@ -42,13 +44,15 @@ extension PNDAImageView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
-    
-    
     @objc
     func handleTap() {
         tapCallback?()
     }
-
+    
+    /// Easily load an image from a URL string and cache it to reduce network overhead.
+    /// - Parameters:
+    ///   - urlString: The url location of your image
+    ///   - completion: Optionally execute some task after the image download completes
     open func loadImage(urlString: String, completion: (() -> ())? = nil) {
         image = nil
         self.urlStringForChecking = urlString
@@ -84,5 +88,14 @@ extension PNDAImageView {
                 }
             }
         }).resume()
+    }
+}
+
+//MARK: -UIImageView Extension
+extension UIImageView {
+    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+        self.init(image: image)
+        self.contentMode = contentMode
+        self.clipsToBounds = true
     }
 }
