@@ -11,6 +11,7 @@
 import Foundation
 import UIKit
 
+/// This are the anchors available to set constraints to.
 public struct PNDAAnchoredConstraints {
     public var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
 }

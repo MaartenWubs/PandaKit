@@ -25,6 +25,9 @@ public enum Anchor {
 extension UIView {
     
     @discardableResult
+    /// Set constraints for the specified acnhors
+    /// - Parameter anchors: anchors needing constraints
+    /// - Returns: A View with all the specified anchors set to the constraint
     open func anchor(_ anchors: Anchor...) -> PNDAAnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraints = PNDAAnchoredConstraints()
@@ -142,6 +145,9 @@ extension UIView {
     }
     
     @discardableResult
+    /// Scales the view to the fill the entire superview, with some padding if specified
+    /// - Parameter padding: The amount of padding to the view
+    /// - Returns: Returns the view scaled to fill the superview with some padding if specified.
     public func viewFillSuperview(padding: UIEdgeInsets = .zero) -> PNDAAnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         let anchoredConstraints = PNDAAnchoredConstraints()
@@ -160,6 +166,9 @@ extension UIView {
     }
 
     @discardableResult
+    /// Scales the view to fill the superview within the safe area of the device.
+    /// - Parameter padding: Padding around the view.
+    /// - Returns: Returns the view scaled to fill the superview within the safe area.
     open func viewFillSuperviewInSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> PNDAAnchoredConstraints {
         let anchoredConstraints = PNDAAnchoredConstraints()
         guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
@@ -175,6 +184,8 @@ extension UIView {
                       padding: padding)
     }
     
+    /// This method centers the view within the Superview.
+    /// - Parameter size: This is the width and height of the view.
     open func centerViewInSuperview(size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterXAnchor = superview?.centerXAnchor {
@@ -194,16 +205,21 @@ extension UIView {
         }
     }
     
+    /// Centers the view to its X Anchor compared to the specified anchor in the parameter.
+    /// - Parameter anchor: Anchor to set the views constraints to.
     open func centerViewXAnchorTo(_ anchor: NSLayoutXAxisAnchor) {
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: anchor).isActive = true
     }
     
+    /// Centers the view to its Y Anchor compared to the specified anchor in the parameter.
+    /// - Parameter anchor: Anchor to set the views constraint to.
     open func centerViewYAnchorTo(_ anchor: NSLayoutYAxisAnchor) {
         translatesAutoresizingMaskIntoConstraints = false
         centerYAnchor.constraint(equalTo: anchor).isActive = true
     }
     
+    /// Cetners the view to the X Axis of the superview
     open func centerViewToXAxisOfSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterXAnchor = superview?.centerXAnchor {
@@ -211,6 +227,7 @@ extension UIView {
         }
     }
     
+    /// Centers the view to the Y Axis of the superview
     open func centerViewToYAxisOfSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterYAnchor = superview?.centerYAnchor {
@@ -219,6 +236,9 @@ extension UIView {
     }
     
     @discardableResult
+    /// Sets the height constraint of the view its applied to.
+    /// - Parameter constant: A CGFloat specifing the height of the view
+    /// - Returns: The view with the specified height.
     open func constraintHeight(with constant: CGFloat) -> PNDAAnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraintes = PNDAAnchoredConstraints()
@@ -228,6 +248,9 @@ extension UIView {
     }
     
     @discardableResult
+    /// Sets the width constraint of the view its applied to.
+    /// - Parameter constant: A CGFloat specifing the width of the view.
+    /// - Returns: The view with the specified width.
     open func constraintWidth(with constant: CGFloat) -> PNDAAnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         var anchortedConstraintes = PNDAAnchoredConstraints()
@@ -236,6 +259,12 @@ extension UIView {
         return anchortedConstraintes
     }
     
+    /// Applies a shadow to the view its applied to.
+    /// - Parameters:
+    ///   - opacity: The opacity of the shadow.
+    ///   - radius: The Radius of the shadow.
+    ///   - offset: Shadow offset.
+    ///   - color: The color of the shadow.
     open func setupViewShadow(opacity: Float = 0, radius: CGFloat = 0, offset: CGSize = .zero, color: UIColor = .black) {
         layer.shadowOpacity = opacity
         layer.shadowRadius = radius
