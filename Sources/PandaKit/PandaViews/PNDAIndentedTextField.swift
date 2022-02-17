@@ -11,6 +11,7 @@
 import Foundation
 import UIKit
 
+/// An object that displays an editable text area in your interface.
 open class PNDAIndentedTextField: UITextField {
     
     let padding: CGFloat

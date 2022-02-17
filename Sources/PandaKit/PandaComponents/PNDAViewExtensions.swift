@@ -307,7 +307,7 @@ extension UIView {
     ///   - alignment: The layout of arranged views perpendicular to the UIStackView axis
     ///   - distribution: The size and position of the arranged views along the UIStackView axis
     /// - Returns: Returns the configured UIStackView
-    open func vStackView(_ views: UIView...,
+    open func VStackView(_ views: UIView...,
                     spacing: CGFloat = 0,
                     alignment: UIStackView.Alignment = .fill,
                     distribution: UIStackView.Distribution = .fill) -> UIStackView {
@@ -323,7 +323,7 @@ extension UIView {
     ///   - alignment: The layout of arranged views perpendicular to the UIStackView axis
     ///   - distribution: The size and position of the arranged views along the UIStackView axis
     /// - Returns: Returns the configured UIStackView
-    open func hStackView(_ views: UIView...,
+    open func HStackView(_ views: UIView...,
                     spacing: CGFloat = 0,
                     alignment: UIStackView.Alignment = .fill,
                     distribution: UIStackView.Distribution = .fill) -> UIStackView {
