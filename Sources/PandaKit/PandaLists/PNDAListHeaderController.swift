@@ -17,9 +17,9 @@ import UIKit
 /// -**T**: The cell type that this list will register and dequeue
 /// -**U:**: The item type that each cell will visually represent
 /// -**H**: The header type above the scetion of cells.
-@available(iOS 13.0, tvOS, *)
+@available(iOS 13.0, tvOS 13.0, *)
 open class PNDAListHeaderController<T: PNDAListCell<U>, U,
                                     H: UICollectionReusableView>:
-                                    PNDAListHeaderFooterController<T, U, H, UICollectionReusableView {
+                                    PNDAListHeaderFooterController<T, U, H, UICollectionReusableView> {
     
 }
