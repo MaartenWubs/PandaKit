@@ -90,6 +90,6 @@ let myColor = UIColor.withRGBValue(231, 41, 156, 1)
 
 PandaKit also provides additional colors that you can see below
 
-/Users/maartenwubs/Documents/Grand Color Card.png
+![Grand Color Card](https://user-images.githubusercontent.com/64893914/154495051-4fb0533e-1ba9-4c44-b5e4-5d1583dfa880.png)
 
 
