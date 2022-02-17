@@ -13,7 +13,7 @@ import UIKit
 /// list views. In order to render out the items in the list, provide it with a PNDADatasource object.
 @available(iOS 13.0, tvOS 13.0, *)
 open class PNDADatasourceController: UICollectionViewController,
-                                UICollectionViewDelegateFlowLayout {
+                                     UICollectionViewDelegateFlowLayout {
     
     public let activityIndicatorView: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)

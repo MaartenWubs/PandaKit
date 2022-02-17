@@ -92,4 +92,37 @@ PandaKit also provides additional colors that you can see below
 
 ![Grand Color Card](https://user-images.githubusercontent.com/64893914/154495051-4fb0533e-1ba9-4c44-b5e4-5d1583dfa880.png)
 
+You can also access PNDAColor to get default colors that automaticly adjust to the devices
+dark mode or light mode
 
+## Panda Objects
+
+PandaKit provides a limited amount of custom View Objects that you can use.
+
+### View
+
+The most simple view in PandaKit is the PNDAView. This inherits all the functionality that
+comes with UIView. It is easy to setup a PNDAView by overriding the setupView method.
+
+``` swift
+
+class YourView: PNDAView {
+
+    override func setupView() {
+        // Your view code...
+    }
+
+} 
+
+```
+Every time you call your view, the ```setupView()``` method will automatically be called
+and will setup the view for you.
+
+### Collection views
+
+PandaKit comes with an easy to use CollectionView. With the PNDADatasourceController
+it is easier to setup a collection view without all the boiler plate code that comes with
+a UICOllectionViewController. You just have to provide it with a PNDADatasource and PandaKit
+will do the setup automatically for you.
+
+PandaKit also makes it easier to use headers and footers for your collection view.
