@@ -6,9 +6,12 @@
 // Copyright (c) 2022 Maarten Wubs
 //
 //===----------------------------------------------------------------------===//
+
 import Foundation
 import UIKit
 
+/// An UIImageView object that initializes with the provided Image to be sized to fit
+/// into the view keeping its aspect.
 open class PNDAAspectFitImageView: UIImageView {
     
     convenience public init(image: UIImage? = nil, cornerRadius: CGFloat = 0) {

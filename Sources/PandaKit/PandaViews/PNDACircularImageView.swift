@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 
 @available(iOS 13.0, tvOS 13.0, *)
+/// A circular image view object that inherits all the functionality form UIImageView
 open class PNDACircularImageView: UIImageView {
  
     public init(width: CGFloat, image: UIImage? = nil ) {
