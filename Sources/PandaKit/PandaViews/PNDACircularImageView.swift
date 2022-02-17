@@ -1,14 +1,17 @@
+
+//===----------------------------------------------------------------------===//
 //
-//  File.swift
-//  
+// This source file is part of the PandaKit project
 //
-//  Created by Maarten Wubs on 2/15/22.
+// Copyright (c) 2022 Maarten Wubs
 //
+//===----------------------------------------------------------------------===//
 
 import Foundation
 import UIKit
 
 @available(iOS 13.0, tvOS 13.0, *)
+/// A circular image view object that inherits all the functionality form UIImageView
 open class PNDACircularImageView: UIImageView {
  
     public init(width: CGFloat, image: UIImage? = nil ) {
