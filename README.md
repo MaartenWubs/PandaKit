@@ -20,6 +20,9 @@ You can install this package using Xcode's package manager.
 Once added, you only have to import PandaKit in the file you want to use it.
 PandaKit is fully compatible with UIkit and other standard Apple frameworks.
 
+You can use the PandaKit.doccarchive to import the PandaKit Documentation to your
+Xcode documentation.
+
 ## Extensions
 
 PandaKit provides a bunch of extension methods to the UIView class. These extension 
