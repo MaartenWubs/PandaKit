@@ -53,7 +53,7 @@ extension PNDAImageView {
     /// - Parameters:
     ///   - urlString: The url location of your image
     ///   - completion: Optionally execute some task after the image download completes
-    open func loadImage(urlString: String, completion: (() -> ())? = nil) {
+    public func loadImage(urlString: String, completion: (() -> ())? = nil) {
         image = nil
         self.urlStringForChecking = urlString
         let urlKey = urlString as NSString

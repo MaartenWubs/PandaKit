@@ -14,35 +14,35 @@ import UIKit
 extension UIStackView {
     
     @discardableResult
-    open func withMargin(_ margins: UIEdgeInsets) -> UIStackView {
+    public func withMargin(_ margins: UIEdgeInsets) -> UIStackView {
         layoutMargins = margins
         isLayoutMarginsRelativeArrangement = true
         return self
     }
     
     @discardableResult
-    open func paddingLeft(_ left: CGFloat) -> UIStackView {
+    public func paddingLeft(_ left: CGFloat) -> UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins.left = left
         return self
     }
     
     @discardableResult
-    open func paddingTop(_ top: CGFloat) -> UIStackView {
+    public func paddingTop(_ top: CGFloat) -> UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins.top = top
         return self
     }
     
     @discardableResult
-    open func paddingRight(_ right: CGFloat) -> UIStackView {
+    public func paddingRight(_ right: CGFloat) -> UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins.right = right
         return self
     }
     
     @discardableResult
-    open func paddingBottom(_ bottom: CGFloat) -> UIStackView {
+    public func paddingBottom(_ bottom: CGFloat) -> UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins.bottom = bottom
         return self
