@@ -45,20 +45,18 @@ open class PNDAListHeaderFooterController<T: PNDAListCell<U>, U,
         cell.frame = .init(x: 0, y: 0, width: width, height: bigHeight)
         cell.item = items[indexPath.item]
         cell.layoutIfNeeded()
-    
+        
         return cell.systemLayoutSizeFitting(.init(width: width, height: bigHeight)).height
     }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        #if os(iOS)
-        if #available(iOS 13.0, *) {
-            collectionView.backgroundColor = .systemBackground
-        } else {
-            collectionView.backgroundColor = .cloudColor
-        }
-        #endif
+#if os(iOS)
+        
+        collectionView.backgroundColor = .systemBackground
+        
+#endif
         
         collectionView.register(T.self, forCellWithReuseIdentifier: cellID)
         collectionView.register(H.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: supplementaryID)
